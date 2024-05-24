@@ -11,4 +11,4 @@ function SubTitle({children}) {
 
 
 
-export default SubTitle
+export default SubTitle;
