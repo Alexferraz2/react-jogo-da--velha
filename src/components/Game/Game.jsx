@@ -4,7 +4,8 @@ import styles from "./Game.module.css"
 
 
 import GameOption from "../GameOption/GameOption";
-import Icons from "../Icons/Icons";
+import GameInfo from "../GameInfo/GameInfo"
+
 
 const winnerTable = [
     [0, 1, 2],
@@ -41,6 +42,14 @@ function Game() {
         })
     }
 
+
+    const handReset = () =>{
+        setGameState(Array(9).fill(0))
+        setWinner(0)
+        setCurrentPlayer(currentPlayer * -1) 
+        
+    }
+
     useEffect(() => {
         setCurrentPlayer(currentPlayer * -1)
         verifyGame()
@@ -60,15 +69,11 @@ function Game() {
 
             
             </div>
-            <div className={styles.gameInfo}>
-                <h4>Próximo a jogar</h4>
-                {
-                    currentPlayer === 1 && <Icons iconName="circle"/>
-                }
-                {
-                    currentPlayer === -1 && <Icons iconName="x"/>
-                }
-            </div>
+            <GameInfo
+                currentPlayer={currentPlayer}
+                winner={winner}
+                onReset={handReset}
+            />
         </div>
         
     )

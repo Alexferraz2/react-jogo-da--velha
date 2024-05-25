@@ -1,0 +1,18 @@
+/*.gameInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}*/
+
+.gameInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 20px;
+    gap: 20px;
+    min-height: 177px;
+        
+}
