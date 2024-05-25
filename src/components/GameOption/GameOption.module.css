@@ -8,3 +8,28 @@
     align-items: center;
     cursor: pointer;
 }
+
+
+.gameOption:hover {
+    border: solid  #3BF1F4 2px;
+    transition: .2s ease;
+}
+
+.winner {
+    border: 2px solid #00EEFF;
+    animation: blink 1s infinite;
+    
+}
+
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
