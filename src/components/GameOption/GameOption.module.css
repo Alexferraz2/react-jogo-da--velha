@@ -21,6 +21,11 @@
     
 }
 
+.draw{
+    border: 2px solid #EBF000;
+    animation: blink 1s infinite;
+  }
+
 
 @keyframes blink {
     0% {

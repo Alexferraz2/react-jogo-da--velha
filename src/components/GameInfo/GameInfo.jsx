@@ -3,9 +3,10 @@ import Icons from '../Icons/Icons'
 import Button from "../Button/Button"
 
 
-function GameInfo( {currentPlayer, winner, onReset}) {
+function GameInfo( {currentPlayer, winner, onReset, isDraw}) {
     const shoudEnabledButton = () => {
         if(winner !== 0 ) return true     
+        if(isDraw) return true
         
             
         }
@@ -13,7 +14,7 @@ function GameInfo( {currentPlayer, winner, onReset}) {
     return(
         <div className={styles.gameInfo}>
             {
-                winner === 0 && 
+                !isDraw && winner === 0 && 
                 <>
                     <h4>Próximo a jogar</h4>
                     {
@@ -38,6 +39,16 @@ function GameInfo( {currentPlayer, winner, onReset}) {
                         winner === -1 && <Icons iconName="x"/>
                     }
                 
+                </>
+            }
+
+            {
+                isDraw && 
+                <>
+                
+                    <h4>Fim do jogo!</h4>
+                    <h4>Jogo empatado!!!</h4>
+                    <Icons iconName={'draw'}/>
                 </>
             }
 
