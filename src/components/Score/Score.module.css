@@ -9,3 +9,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+.scoreinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}

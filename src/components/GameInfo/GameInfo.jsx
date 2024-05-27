@@ -8,6 +8,7 @@ function GameInfo( {currentPlayer, winner, onReset, isDraw}) {
         if(winner !== 0 ) return true     
         if(isDraw) return true
         
+        
             
         }
 
