@@ -5,7 +5,7 @@ function Score({count, countx}) {
     return(
         <>
             
-            <h3>Placar: </h3>
+            <h3 >Placar: </h3>
             
             <div className={styles.score}>
                 <div className={styles.scoreinfo}>
